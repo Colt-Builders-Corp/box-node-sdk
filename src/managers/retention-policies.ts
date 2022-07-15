@@ -511,4 +511,4 @@ RetentionPolicies.prototype.dispositionActions =
  */
 RetentionPolicies.prototype.assignmentTypes = RetentionPolicyAssignmentType;
 
-export = RetentionPolicies;
+export default RetentionPolicies;

@@ -1,4 +1,4 @@
-export class Serializable<T> {
+export default class Serializable<T> {
 	constructor(options: {
 		serialize: (value: T) => any;
 		deserialize: (data: any) => T;

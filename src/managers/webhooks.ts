@@ -515,4 +515,4 @@ Webhooks.prototype.validateMessage = Webhooks.validateMessage;
  * @module box-node-sdk/lib/managers/webhooks
  * @see {@Link Webhooks}
  */
-export = Webhooks;
+export default Webhooks;

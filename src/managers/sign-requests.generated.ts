@@ -164,4 +164,4 @@ class SignRequestsManager {
 		);
 	}
 }
-export = SignRequestsManager;
+export default SignRequestsManager;

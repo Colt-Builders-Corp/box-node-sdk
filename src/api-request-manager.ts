@@ -10,7 +10,7 @@ import { Promise } from 'bluebird';
 import { EventEmitter } from 'events';
 import errors from './util/errors';
 
-const APIRequest = require('./api-request');
+import APIRequest from './api-request';
 
 // -----------------------------------------------------------------------------
 // Typedefs
@@ -84,4 +84,4 @@ class APIRequestManager {
  * @module box-node-sdk/lib/api-request-manager
  * @see {@Link APIRequestManager}
  */
-export = APIRequestManager;
+export default APIRequestManager;

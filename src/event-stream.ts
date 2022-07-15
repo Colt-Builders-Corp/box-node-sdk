@@ -359,4 +359,4 @@ if (typeof Readable.prototype.destroy !== 'function') {
 	};
 }
 
-export = EventStream;
+export default EventStream;

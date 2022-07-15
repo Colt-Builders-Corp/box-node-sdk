@@ -856,4 +856,4 @@ class Folders {
  * @module box-node-sdk/lib/managers/folders
  * @see {@Link Folders}
  */
-export = Folders;
+export default Folders;

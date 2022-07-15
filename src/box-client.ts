@@ -60,14 +60,14 @@ type APIRequestManager = any /* FIXME */;
 // ------------------------------------------------------------------------------
 // Requirements
 // ------------------------------------------------------------------------------
-var util = require('util'),
-	qs = require('querystring'),
-	errors = require('./util/errors'),
-	httpStatusCodes = require('http-status'),
-	isIP = require('net').isIP,
-	merge = require('merge-options'),
-	PagingIterator = require('./util/paging-iterator'),
-	pkg = require('../package.json');
+import util from 'util';
+import * as querystring from 'querystring';
+import errors from './util/errors';
+import httpStatusCodes from 'http-status';
+import { isIP } from 'net';
+import merge from 'merge-options';
+import PagingIterator from './util/paging-iterator';
+import pkg from '../package.json';
 
 // ------------------------------------------------------------------------------
 // Private
@@ -145,15 +145,21 @@ function getFullURL(defaultBasePath: string, url: string) {
  * @private
  */
 function formatRequestForBatch(params: Record<string, string | object>) {
+	throw new Error('formatRequestForBatch not implemented');
+/*
 	var relativePath = (params.url as string).replace(/^http.*?\/\d\.\d\//, '/');
-
+	var rel = null; 
+	if(params.qs) {
+		const searchParams = new URLSearchParams(params.qs);
+		rel = searchParams.toString();  
+	}
 	return {
 		method: params.method,
-		relative_url:
-			relativePath + (params.qs ? `?${qs.stringify(params.qs)}` : ''),
+		relative_url: rel,
 		body: params.body,
 		headers: params.headers,
 	};
+*/
 }
 
 /**
@@ -881,4 +887,4 @@ BoxClient.prototype.CURRENT_USER_ID = Users.prototype.CURRENT_USER_ID;
  * @module box-node-sdk/lib/box-client
  * @see {@Link BoxClient}
  */
-export = BoxClient;
+export default BoxClient;
