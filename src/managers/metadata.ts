@@ -8,7 +8,7 @@
 
 import BoxClient from '../box-client';
 import urlPath from '../util/url-path';
-const merge = require('merge-options');
+import merge from 'merge-options';
 
 // -----------------------------------------------------------------------------
 // Typedefs

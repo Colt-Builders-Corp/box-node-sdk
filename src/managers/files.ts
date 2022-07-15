@@ -15,7 +15,7 @@ import BoxClient from '../box-client';
 import errors from '../util/errors';
 import urlPath from '../util/url-path';
 
-const ChunkedUploader = require('../chunked-uploader');
+import ChunkedUploader from '../chunked-uploader';
 
 // -----------------------------------------------------------------------------
 // Typedefs

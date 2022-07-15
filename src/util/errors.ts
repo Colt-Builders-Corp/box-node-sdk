@@ -7,7 +7,7 @@ import * as qs from 'querystring';
 // ------------------------------------------------------------------------------
 // Requirements
 // ------------------------------------------------------------------------------
-const httpStatusCodes = require('http-status');
+import httpStatusCodes from 'http-status';
 
 const TRACE_ID_HEADER_NAME = 'box-request-id';
 

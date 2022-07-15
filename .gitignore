@@ -12,6 +12,4 @@ docs/jsdoc-dev
 .npmrc
 .nvmrc
 
-/lib/
-
 /openapi.json
