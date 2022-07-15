@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the  Box Terms of Service Resource
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Enum value of scope of the custom terms of services set to either managed by an enterprise or enternal to an enterprise
  *

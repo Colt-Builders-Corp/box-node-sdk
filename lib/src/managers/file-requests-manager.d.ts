@@ -1,5 +1,5 @@
-import BoxClient from "../box-client";
-import { FileRequest, FileRequestCopyBody, FileRequestUpdateBody } from "../schemas";
+import BoxClient from "../box-client.ts";
+import { FileRequest, FileRequestCopyBody, FileRequestUpdateBody } from "../schemas.ts";
 declare class FileRequestsManager {
     client: BoxClient;
     constructor(client: BoxClient);

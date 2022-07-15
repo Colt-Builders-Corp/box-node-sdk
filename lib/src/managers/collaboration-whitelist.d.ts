@@ -1,3 +1,3 @@
 /** @deprecated */
-import CollaborationAllowlist from './collaboration-allowlist';
+import CollaborationAllowlist from './collaboration-allowlist.ts';
 export default CollaborationAllowlist;

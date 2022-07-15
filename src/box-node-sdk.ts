@@ -8,16 +8,16 @@
 
 import { EventEmitter } from 'events';
 import * as qs from 'querystring';
-import CCGAPISession from './sessions/ccg-session';
-import APIRequestManager from './api-request-manager';
-import BoxClient from './box-client';
-import TokenManager from './token-manager';
+import CCGAPISession from './sessions/ccg-session.ts';
+import APIRequestManager from './api-request-manager.ts';
+import BoxClient from './box-client.ts';
+import TokenManager from './token-manager.ts';
 
-import Config from './util/config';
-import BasicAPISession from './sessions/basic-session';
-import PersistentAPISession from './sessions/persistent-session';
-import AppAuthSession from './sessions/app-auth-session';
-import Webhooks from './managers/webhooks';
+import Config from './util/config.ts';
+import BasicAPISession from './sessions/basic-session.ts';
+import PersistentAPISession from './sessions/persistent-session.ts';
+import AppAuthSession from './sessions/app-auth-session.ts';
+import Webhooks from './managers/webhooks.ts';
 
 // ------------------------------------------------------------------------------
 // Typedefs and Callbacks

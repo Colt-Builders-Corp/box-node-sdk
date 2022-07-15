@@ -77,7 +77,7 @@ type UploadSessionInfo = {
 import { EventEmitter } from 'events';
 import { Readable as ReadableStream } from 'stream';
 import crypto from 'crypto';
-import BoxClient from './box-client';
+import BoxClient from './box-client.ts';
 
 // -----------------------------------------------------------------------------
 // Private

@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for Enterprise resources
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * List of valid user types
  * @readonly

@@ -6,9 +6,9 @@
 // Requirements
 // -----------------------------------------------------------------------------
 
-import urlPath from '../util/url-path';
+import urlPath from '../util/url-path.ts';
 import crypto from 'crypto';
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 
 // -----------------------------------------------------------------------------
 // Typedefs

@@ -2,7 +2,7 @@
  * @fileoverview Manager for the Groups resource
  * @author mwiller
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Enum of valid access levels for groups, which are used to specify who can
  * perform certain actions on the group.

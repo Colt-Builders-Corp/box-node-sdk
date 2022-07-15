@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the Tasks Resource
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Enum of valid task resolution states
  * @readonly

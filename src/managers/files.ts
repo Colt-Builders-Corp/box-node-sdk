@@ -11,11 +11,11 @@ import crypto from 'crypto';
 import httpStatusCodes from 'http-status';
 import { Readable, Writable } from 'stream';
 import urlTemplate from 'url-template';
-import BoxClient from '../box-client';
-import errors from '../util/errors';
-import urlPath from '../util/url-path';
+import BoxClient from '../box-client.ts';
+import errors from '../util/errors.ts';
+import urlPath from '../util/url-path.ts';
 
-import ChunkedUploader from '../chunked-uploader';
+import ChunkedUploader from '../chunked-uploader.ts';
 
 // -----------------------------------------------------------------------------
 // Typedefs

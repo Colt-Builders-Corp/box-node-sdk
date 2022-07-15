@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the Box Collaboration Allowlist Resource
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Collaboration Allowlist parameter constant
  * @typedef {string} CollaborationAllowlistDirection Determines the type of restriction for allowlisting for a domain

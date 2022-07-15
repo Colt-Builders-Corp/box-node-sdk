@@ -7,7 +7,7 @@
 // ------------------------------------------------------------------------------
 
 import { Readable } from 'stream';
-import BoxClient from './box-client';
+import BoxClient from './box-client.ts';
 
 // ------------------------------------------------------------------------------
 // Typedefs

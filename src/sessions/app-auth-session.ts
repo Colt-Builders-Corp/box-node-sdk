@@ -8,7 +8,7 @@
 
 import assert from 'assert';
 import { Promise } from 'bluebird';
-import errors from '../util/errors';
+import errors from '../util/errors.ts';
 
 // ------------------------------------------------------------------------------
 // Typedefs

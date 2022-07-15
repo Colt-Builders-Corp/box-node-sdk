@@ -1,6 +1,6 @@
-import BoxClient from '../box-client';
-import urlPath from '../util/url-path';
-import * as schemas from '../schemas';
+import BoxClient from '../box-client.ts';
+import urlPath from '../util/url-path.ts';
+import * as schemas from '../schemas.ts';
 /**
  * Simple manager for interacting with all Sign Requests endpoints and actions.
  */

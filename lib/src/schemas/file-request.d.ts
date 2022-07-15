@@ -1,5 +1,5 @@
-import { FolderMini } from "./folder-mini.generated";
-import { UserMini } from "./user-mini";
+import { FolderMini } from "./folder-mini.generated.ts";
+import { UserMini } from "./user-mini.ts";
 declare type FileRequestStatus = 'active' | 'inactive';
 export interface FileRequest {
     id: string;

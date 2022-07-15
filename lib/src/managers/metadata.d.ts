@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the Box Metadata Resource
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Valid metadata field types
  * @readonly

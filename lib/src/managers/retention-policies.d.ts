@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the Retention Policies Resource
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Enum of valid retention policy types, which specify how long the policy should
  * remain in effect.

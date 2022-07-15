@@ -1,6 +1,6 @@
-import BoxClient from "../box-client";
-import {FileRequest, FileRequestCopyBody, FileRequestUpdateBody} from "../schemas";
-import urlPath from "../util/url-path";
+import BoxClient from "../box-client.ts";
+import {FileRequest, FileRequestCopyBody, FileRequestUpdateBody} from "../schemas.ts";
+import urlPath from "../util/url-path.ts";
 
 class FileRequestsManager {
 	client: BoxClient;

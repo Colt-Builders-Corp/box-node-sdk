@@ -3,7 +3,7 @@
  */
 /// <reference types="node" />
 import { Readable, Writable } from 'stream';
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Enum of valid x-rep- hint values for generating representation info
  *

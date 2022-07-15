@@ -1,8 +1,7 @@
 /**
  * @fileoverview Token Manager
  */
-import Promise from 'bluebird';
-import APIRequestManager from './api-request-manager';
+import APIRequestManager from './api-request-manager.ts';
 declare type Config = Record<string, any>;
 /**
  * Token request options. Set by the consumer to add/modify the params sent to the
@@ -85,12 +84,7 @@ declare class TokenManager {
      * @returns {Promise<TokenInfo>} Promise resolving to the token info
      * @private
      */
-    getTokens(formParams: Record<string, any>, options?: TokenRequestOptions | null): Promise<{
-        accessToken: any;
-        refreshToken: any;
-        accessTokenTTLMS: number;
-        acquiredAtMS: number;
-    }>;
+    getTokens(formParams: Record<string, any>, options?: TokenRequestOptions | null): any;
     /**
      * Acquires token info using an authorization code
      *
@@ -98,24 +92,14 @@ declare class TokenManager {
      * @param {TokenRequestOptions} [options] - Sets optional behavior for the token grant
      * @returns {Promise<TokenInfo>} Promise resolving to the token info
      */
-    getTokensAuthorizationCodeGrant(authorizationCode: string, options?: TokenRequestOptions): Promise<{
-        accessToken: any;
-        refreshToken: any;
-        accessTokenTTLMS: number;
-        acquiredAtMS: number;
-    }>;
+    getTokensAuthorizationCodeGrant(authorizationCode: string, options?: TokenRequestOptions): any;
     /**
      * Acquires token info using the client credentials grant.
      *
      * @param {TokenRequestOptions} [options] - Sets optional behavior for the token grant
      * @returns {Promise<TokenInfo>} Promise resolving to the token info
      */
-    getTokensClientCredentialsGrant(options?: TokenRequestOptions): Promise<{
-        accessToken: any;
-        refreshToken: any;
-        accessTokenTTLMS: number;
-        acquiredAtMS: number;
-    }>;
+    getTokensClientCredentialsGrant(options?: TokenRequestOptions): any;
     /**
      * Refreshes the access and refresh tokens for a given refresh token.
      *
@@ -123,12 +107,7 @@ declare class TokenManager {
      * @param {TokenRequestOptions} [options] - Sets optional behavior for the token grant
      * @returns {Promise<TokenInfo>} Promise resolving to the token info
      */
-    getTokensRefreshGrant(refreshToken: string, options?: TokenRequestOptions): Promise<{
-        accessToken: any;
-        refreshToken: any;
-        accessTokenTTLMS: number;
-        acquiredAtMS: number;
-    }>;
+    getTokensRefreshGrant(refreshToken: string, options?: TokenRequestOptions): any;
     /**
      * Gets tokens for enterprise administration of app users
      * @param {string} type The type of token to create, "user" or "enterprise"
@@ -136,7 +115,7 @@ declare class TokenManager {
      * @param {TokenRequestOptions} [options] - Sets optional behavior for the token grant
      * @returns {Promise<TokenInfo>} Promise resolving to the token info
      */
-    getTokensJWTGrant(type: string, id: string, options?: TokenRequestOptions): Promise<any>;
+    getTokensJWTGrant(type: string, id: string, options?: TokenRequestOptions): any;
     /**
      * Attempt a retry if possible and create a new JTI claim. If the request hasn't exceeded it's maximum number of retries,
      * re-execute the request (after the retry interval). Otherwise, propagate a new error.
@@ -168,12 +147,7 @@ declare class TokenManager {
         tokenRequestOptions?: TokenRequestOptions;
         actor?: ActorParams;
         sharedLink?: SharedLinkParams;
-    }): Promise<{
-        accessToken: any;
-        refreshToken: any;
-        accessTokenTTLMS: number;
-        acquiredAtMS: number;
-    }>;
+    }): any;
     /**
      * Revokes a token pair associated with a given access or refresh token.
      *
@@ -181,7 +155,7 @@ declare class TokenManager {
      * @param {TokenRequestOptions} [options] - Sets optional behavior for the token grant
      * @returns {Promise} Promise resolving if the revoke succeeds
      */
-    revokeTokens(token: string, options?: TokenRequestOptions): Promise<unknown>;
+    revokeTokens(token: string, options?: TokenRequestOptions): any;
 }
 /**
  * Provides interactions with Box OAuth2 tokening system.

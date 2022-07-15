@@ -4,7 +4,7 @@
 /// <reference types="node" />
 import { EventEmitter } from 'events';
 import request from 'request';
-import Config from './util/config';
+import Config from './util/config.ts';
 /**
  * The API response object includes information about the request made and its response. The information attached is a subset
  * of the information returned by the request module, which is too large and complex to be safely handled (contains circular

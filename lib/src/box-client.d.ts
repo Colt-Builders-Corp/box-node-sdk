@@ -1,11 +1,11 @@
 /**
  * @fileoverview Box API Client
  */
-import Events from './managers/events';
-import Files from './managers/files';
-import Folders from './managers/folders';
-import SignRequests from './managers/sign-requests.generated';
-import FileRequestsManager from "./managers/file-requests-manager";
+import Events from './managers/events.ts';
+import Files from './managers/files.ts';
+import Folders from './managers/folders.ts';
+import SignRequests from './managers/sign-requests.generated.ts';
+import FileRequestsManager from "./managers/file-requests-manager.ts";
 /**
  * A collaboration role constant
  * @typedef {string} CollaborationRole

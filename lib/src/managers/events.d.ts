@@ -2,8 +2,7 @@
  * @fileoverview Manager for the Box Events Resource
  */
 /// <reference types="bluebird" />
-import BoxClient from '../box-client';
-import EnterpriseEventStream from '../enterprise-event-stream';
+import BoxClient from '../box-client.ts';
 /**
  * Enum of enterprise event types
  *
@@ -218,6 +217,6 @@ declare class Events {
         pollingInterval?: number;
         chunkSize?: number;
         streamType?: 'admin_logs' | 'admin_logs_streaming';
-    }, callback?: Function): import("bluebird")<EnterpriseEventStream>;
+    }, callback?: Function): import("bluebird")<any>;
 }
 export default Events;

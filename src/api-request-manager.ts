@@ -8,9 +8,9 @@
 
 import { Promise } from 'bluebird';
 import { EventEmitter } from 'events';
-import errors from './util/errors';
+import errors from './util/errors.ts';
 
-import APIRequest from './api-request';
+import APIRequest from './api-request.ts';
 
 // -----------------------------------------------------------------------------
 // Typedefs

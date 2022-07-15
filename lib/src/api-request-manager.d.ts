@@ -3,7 +3,6 @@
  */
 /// <reference types="node" />
 /// <reference types="bluebird" />
-/// <reference types="request" />
 import { EventEmitter } from 'events';
 declare type Config = any;
 /**
@@ -30,7 +29,7 @@ declare class APIRequestManager {
      * @param {Object} options The request options
      * @returns {Stream.Readable} The response stream
      */
-    makeStreamingRequest(options: any): import("request").Request | undefined;
+    makeStreamingRequest(options: any): any;
 }
 /**
  * @module box-node-sdk/lib/api-request-manager

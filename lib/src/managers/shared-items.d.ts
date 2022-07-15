@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the Shared Items
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Simple manager for interacting with all 'Shared Item' endpoints and actions.
  *

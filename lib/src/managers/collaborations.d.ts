@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the Box Collaboration Resource
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 declare type CollaborationRole = any;
 declare type ItemType = 'folder' | string;
 /**

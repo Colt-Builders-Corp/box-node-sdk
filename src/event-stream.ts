@@ -10,7 +10,7 @@ import { Promise } from 'bluebird';
 import qs from 'querystring';
 import { Readable } from 'stream';
 import util from 'util';
-import BoxClient from './box-client';
+import BoxClient from './box-client.ts';
 
 // ------------------------------------------------------------------------------
 // Typedefs

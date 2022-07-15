@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the Web Links Resource
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Simple manager for interacting with all 'Weblinks' endpoints and actions.
  *

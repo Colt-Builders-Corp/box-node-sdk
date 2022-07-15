@@ -2,7 +2,7 @@
  * @fileoverview Manager for the Device Pins resource
  * @author mwiller
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Simple manager for interacting with all Device Pin endpoints and actions.
  *

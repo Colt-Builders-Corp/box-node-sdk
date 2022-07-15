@@ -6,9 +6,9 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-import BoxClient from '../box-client';
-import urlPath from '../util/url-path';
-import errors from '../util/errors';
+import BoxClient from '../box-client.ts';
+import urlPath from '../util/url-path.ts';
+import errors from '../util/errors.ts';
 
 // -----------------------------------------------------------------------------
 // Typedefs

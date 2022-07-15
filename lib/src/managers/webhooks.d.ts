@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the Box Webhooks resource
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * A webhook trigger type constant
  * @typedef {string} WebhookTriggerType

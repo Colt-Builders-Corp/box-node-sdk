@@ -10,9 +10,9 @@ import Promise from 'bluebird';
 import httpStatusCodes from 'http-status';
 import jwt from 'jsonwebtoken';
 import uuid from 'uuid';
-import APIRequestManager from './api-request-manager';
-import errors from './util/errors';
-import getRetryTimeout from './util/exponential-backoff';
+import APIRequestManager from './api-request-manager.ts';
+import errors from './util/errors.ts';
+import getRetryTimeout from './util/exponential-backoff.ts';
 
 // ------------------------------------------------------------------------------
 // Typedefs and Callbacks

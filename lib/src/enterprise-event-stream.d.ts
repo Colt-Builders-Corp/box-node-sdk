@@ -3,7 +3,7 @@
  */
 /// <reference types="node" />
 import { Readable } from 'stream';
-import BoxClient from './box-client';
+import BoxClient from './box-client.ts';
 declare type Options = {
     streamPosition?: string;
     startDate?: string;

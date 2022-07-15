@@ -7,8 +7,8 @@
 // ------------------------------------------------------------------------------
 
 import httpStatusCodes from 'http-status';
-import BoxClient from '../box-client';
-import errors from '../util/errors';
+import BoxClient from '../box-client.ts';
+import errors from '../util/errors.ts';
 
 // ------------------------------------------------------------------------------
 // Private

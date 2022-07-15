@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the Box Folders Resource
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 declare type FolderSharedLinkAccess = 'open' | 'company' | 'collaborators' | null;
 declare type FolderSharedLinkPermissions = {
     /**

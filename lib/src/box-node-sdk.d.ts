@@ -2,13 +2,10 @@
  * @fileoverview Box SDK for Node.js
  */
 /// <reference types="node" />
-/// <reference types="bluebird" />
 import { EventEmitter } from 'events';
-import CCGAPISession from './sessions/ccg-session';
-import APIRequestManager from './api-request-manager';
-import BoxClient from './box-client';
-import TokenManager from './token-manager';
-import Webhooks from './managers/webhooks';
+import CCGAPISession from './sessions/ccg-session.ts';
+import APIRequestManager from './api-request-manager.ts';
+import TokenManager from './token-manager.ts';
 /**
  * Object representing interface functions for PersistentClient to interact with the consumer app's central storage layer.
  * @typedef {Object} TokenStore
@@ -76,7 +73,7 @@ declare class BoxSDKNode extends EventEmitter {
      * the consumer to call BoxSDK.validateWebhookMessage() by just requiring the SDK,
      * instead of needing to create a client (which is not needed to validate messages).
      */
-    static validateWebhookMessage: typeof Webhooks.validateMessage;
+    static validateWebhookMessage: any;
     constructor(params: UserConfigurationOptions);
     /**
      * Setup the SDK instance by instantiating necessary objects with current
@@ -108,7 +105,7 @@ declare class BoxSDKNode extends EventEmitter {
      * @param {string} accessToken A user's Box API access token
      * @returns {BoxClient} Returns a new Box Client paired to a new BasicAPISession
      */
-    getBasicClient(accessToken: string): BoxClient;
+    getBasicClient(accessToken: string): any;
     /**
      * Returns a Box Client with a Basic API Session. The client is able to make requests on behalf of a user.
      * A basic session has no access to a user's refresh token. Because of this, once the session's tokens
@@ -117,7 +114,7 @@ declare class BoxSDKNode extends EventEmitter {
      * @param {string} accessToken A user's Box API access token
      * @returns {BoxClient} Returns a new Box Client paired to a new BasicAPISession
      */
-    static getBasicClient(accessToken: string): BoxClient;
+    static getBasicClient(accessToken: string): any;
     /**
      * Returns a Box Client with a persistent API session. A persistent API session helps manage the user's tokens,
      * and can refresh them automatically if the access token expires. If a central data-store is given, the session
@@ -131,7 +128,7 @@ declare class BoxSDKNode extends EventEmitter {
      * @param {TokenStore} [tokenStore] An optional token store for reading/writing tokens to session
      * @returns {BoxClient} Returns a new Box Client paired to a new PersistentAPISession
      */
-    getPersistentClient(tokenInfo: any, tokenStore?: TokenStore): BoxClient;
+    getPersistentClient(tokenInfo: any, tokenStore?: TokenStore): any;
     /**
      * Returns a Box Client configured to use Client Credentials Grant for a service account. Requires enterprise ID
      * to be set when configuring SDK instance.
@@ -140,7 +137,7 @@ declare class BoxSDKNode extends EventEmitter {
      * same tokens, which allows them to refresh them efficiently and reduce load on both the application and
      * the API.
      */
-    getAnonymousClient(): BoxClient;
+    getAnonymousClient(): any;
     /**
      * Returns a Box Client configured to use Client Credentials Grant for a specified user.
      *
@@ -149,8 +146,8 @@ declare class BoxSDKNode extends EventEmitter {
      * same tokens, which allows them to refresh them efficiently and reduce load on both the application and
      * the API.
      */
-    getCCGClientForUser(userId: string): BoxClient;
-    _getCCGClient(config: CCGConfig): BoxClient;
+    getCCGClientForUser(userId: string): any;
+    _getCCGClient(config: CCGConfig): any;
     /**
      * Create a new client using App Auth for the given entity. This allows either
      * managing App Users (as the enterprise) or performing operations as the App
@@ -161,7 +158,7 @@ declare class BoxSDKNode extends EventEmitter {
      * @param {TokenStore} [tokenStore] (Optional) the token store to use for caching tokens
      * @returns {BoxClient} A new client authorized as the app user or enterprise
      */
-    getAppAuthClient(type: string, id?: string, tokenStore?: TokenStore): BoxClient;
+    getAppAuthClient(type: string, id?: string, tokenStore?: TokenStore): any;
     /**
      * Generate the URL for the authorize page to send users to for the first leg of
      * the OAuth2 flow.
@@ -180,12 +177,7 @@ declare class BoxSDKNode extends EventEmitter {
      * @param {Function} [callback] - passed a TokenInfo object if tokens were granted successfully
      * @returns {Promise<TokenInfo>} Promise resolving to the token info
      */
-    getTokensAuthorizationCodeGrant(authorizationCode: string, options: TokenRequestOptions | null, callback: Function): import("bluebird")<{
-        accessToken: any;
-        refreshToken: any;
-        accessTokenTTLMS: number;
-        acquiredAtMS: number;
-    }>;
+    getTokensAuthorizationCodeGrant(authorizationCode: string, options: TokenRequestOptions | null, callback: Function): any;
     /**
      * Refreshes the access and refresh tokens for a given refresh token.
      *
@@ -194,12 +186,7 @@ declare class BoxSDKNode extends EventEmitter {
      * @param {Function} [callback] - passed a TokenInfo object if tokens were granted successfully
      * @returns {Promise<TokenInfo>} Promise resolving to the token info
      */
-    getTokensRefreshGrant(refreshToken: string, options: TokenRequestOptions | Function | null, callback: Function): import("bluebird")<{
-        accessToken: any;
-        refreshToken: any;
-        accessTokenTTLMS: number;
-        acquiredAtMS: number;
-    }>;
+    getTokensRefreshGrant(refreshToken: string, options: TokenRequestOptions | Function | null, callback: Function): any;
     /**
      * Gets tokens for enterprise administration of app users
      * @param {string} enterpriseID The ID of the enterprise to generate a token for
@@ -207,7 +194,7 @@ declare class BoxSDKNode extends EventEmitter {
      * @param {Function} [callback] Passed the tokens if successful
      * @returns {Promise<TokenInfo>} Promise resolving to the token info
      */
-    getEnterpriseAppAuthTokens(enterpriseID: string, options: TokenRequestOptions | Function | null, callback: Function): import("bluebird")<any>;
+    getEnterpriseAppAuthTokens(enterpriseID: string, options: TokenRequestOptions | Function | null, callback: Function): any;
     /**
      * Gets tokens for App Users via a JWT grant
      * @param {string} userID The ID of the App User to generate a token for
@@ -215,7 +202,7 @@ declare class BoxSDKNode extends EventEmitter {
      * @param {Function} [callback] Passed the tokens if successful
      * @returns {Promise<TokentInfo>} Promise resolving to the token info
      */
-    getAppUserTokens(userID: string, options: TokenRequestOptions | Function | null, callback: Function): import("bluebird")<any>;
+    getAppUserTokens(userID: string, options: TokenRequestOptions | Function | null, callback: Function): any;
     /**
      * Revokes a token pair associated with a given access or refresh token.
      *
@@ -224,7 +211,7 @@ declare class BoxSDKNode extends EventEmitter {
      * @param {Function} [callback] - If err, revoke failed. Otherwise, revoke succeeded.
      * @returns {Promise<TokenInfo>} Promise resolving to the token info
      */
-    revokeTokens(token: string, options: TokenRequestOptions | Function | null, callback: Function): import("bluebird")<unknown>;
+    revokeTokens(token: string, options: TokenRequestOptions | Function | null, callback: Function): any;
 }
 /** @module box-node-sdk/lib/box-node-sdk */
 export default BoxSDKNode;

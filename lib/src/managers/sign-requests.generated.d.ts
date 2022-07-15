@@ -1,5 +1,5 @@
-import BoxClient from '../box-client';
-import * as schemas from '../schemas';
+import BoxClient from '../box-client.ts';
+import * as schemas from '../schemas.ts';
 /**
  * Simple manager for interacting with all Sign Requests endpoints and actions.
  */

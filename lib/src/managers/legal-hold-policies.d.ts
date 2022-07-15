@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the Legal Hold Policies Resource
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Enum of valid policy assignment types, which specify what object the policy applies to
  * @readonly

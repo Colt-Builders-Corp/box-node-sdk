@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the Box Collection Resource
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Simple manager for interacting with all 'Collection' endpoints and actions.
  *

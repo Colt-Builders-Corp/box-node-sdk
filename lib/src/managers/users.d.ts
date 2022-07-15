@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the Box User Resource
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Simple manager for interacting with all 'User' endpoints and actions.
  *

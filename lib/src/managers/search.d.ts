@@ -1,7 +1,7 @@
 /**
  * @fileoverview Manager for the Box Search Resource
  */
-import BoxClient from '../box-client';
+import BoxClient from '../box-client.ts';
 /**
  * Search metadata filter
  * @typedef {Object} SearchMetadataFilter

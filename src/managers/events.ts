@@ -8,11 +8,11 @@
 
 import { Promise } from 'bluebird';
 import httpStatusCodes from 'http-status';
-import BoxClient from '../box-client';
-import EnterpriseEventStream from '../enterprise-event-stream';
-import EventStream from '../event-stream';
-import errors from '../util/errors';
-import urlPath from '../util/url-path';
+import BoxClient from '../box-client.ts';
+import EnterpriseEventStream from '../enterprise-event-stream.ts';
+import EventStream from '../event-stream.ts';
+import errors from '../util/errors.ts';
+import urlPath from '../util/url-path.ts';
 
 // -----------------------------------------------------------------------------
 // Typedefs
