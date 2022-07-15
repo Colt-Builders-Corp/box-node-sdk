@@ -7,9 +7,9 @@
 // ------------------------------------------------------------------------------
 
 import Promise from 'bluebird';
-import crypto from 'crypto';
+import crypto from 'node:crypto';
 import httpStatusCodes from 'http-status';
-import { Readable, Writable } from 'stream';
+import { Readable, Writable } from 'node:stream';
 import urlTemplate from 'url-template';
 import BoxClient from '../box-client.ts';
 import errors from '../util/errors.ts';

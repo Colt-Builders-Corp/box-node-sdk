@@ -7,7 +7,7 @@
 // -----------------------------------------------------------------------------
 
 import urlPath from '../util/url-path.ts';
-import crypto from 'crypto';
+import crypto from 'node:crypto';
 import BoxClient from '../box-client.ts';
 
 // -----------------------------------------------------------------------------

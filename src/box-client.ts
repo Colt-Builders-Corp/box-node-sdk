@@ -67,7 +67,7 @@ import httpStatusCodes from 'http-status';
 import { isIP } from 'net';
 import merge from 'merge-options';
 import PagingIterator from './util/paging-iterator.ts';
-import pkg from '../package.json';
+import pkg from '../package.json' assert { type: "json" };
 
 // ------------------------------------------------------------------------------
 // Private

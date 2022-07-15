@@ -29,7 +29,7 @@ import PromiseQueue from 'promise-queue';
 // Requirements
 // -----------------------------------------------------------------------------
 
-import errors from './errors';
+import errors from './errors.ts';
 
 PromiseQueue.configure(Promise as any);
 

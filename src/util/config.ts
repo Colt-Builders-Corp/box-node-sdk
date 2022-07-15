@@ -12,7 +12,7 @@ import { Readable } from 'stream';
 // ------------------------------------------------------------------------------
 import merge from 'merge-options';
 import ProxyAgent from 'proxy-agent';
-import pkg from '../../package.json';
+import pkg from '../../package.json' assert { type: "json" };
 const sdkVersion = pkg.version;
 
 // ------------------------------------------------------------------------------

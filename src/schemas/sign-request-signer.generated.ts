@@ -1,4 +1,4 @@
-import * as schemas from '.';
+import * as schemas from './index.ts';
 /**
  * Signer fields for GET Sign Request response
  *
